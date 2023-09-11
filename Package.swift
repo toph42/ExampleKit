@@ -16,12 +16,37 @@ let package = Package(
         .library(
             name: "ExampleKit",
             targets: ["ExampleKit"]
+        ),  
+        .iOSApplication(
+            name: "ExampleApp",
+            targets: ["ExampleAppModule"],
+            displayVersion: "1.0",
+            bundleVersion: "1",
+            appIcon: .placeholder(icon: .tv),
+            accentColor: .presetColor(.brown),
+            supportedDeviceFamilies: [
+                .pad,
+                .phone
+            ],
+            supportedInterfaceOrientations: [
+                .portrait,
+                .landscapeRight,
+                .landscapeLeft,
+                .portraitUpsideDown(.when(deviceFamilies: [.pad]))
+            ]
         )
     ],
     targets: [ 
         .target(
             name: "ExampleKit",
             dependencies: []
+        ),
+        .executableTarget(
+            name: "ExampleAppModule",
+            dependencies: ["ExampleKit"],
+            swiftSettings: [
+                .enableUpcomingFeature("BareSlashRegexLiterals")
+            ]
         )
     ]
 )
