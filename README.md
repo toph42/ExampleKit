@@ -31,7 +31,7 @@ It also has a single `target` (an `.executableTarget` representing the product m
 
 #### Sources Folder
 
-The convention of Swift Packages is for each target to have their own folder inside the top-level **Sources** folder. The default **Swift Playground** structure does not create the **Sources** folder. You will need to create the **Sources** folder and two folders inside, one named to match the name of the executable target (the default `AppModule`, or whatever new name you used if you changed it to avoid conflicts) and the other with a name that matches what you used for your `.library` target.
+The convention of Swift Packages is for each target to have its own folder inside the top-level **Sources** folder. The default **Swift Playground** structure does not create the **Sources** folder. You will need to create the **Sources** folder and two folders inside, one named to match the name of the executable target (the default `AppModule`, or whatever new name you used if you changed it to avoid conflicts) and the other with a name that matches what you used for your library’s target.
 
 ### Using the Combined App
 
@@ -43,7 +43,7 @@ You are used to everything being in the same module in **Swift Playgrounds** so 
 
 ## Publishing the Library
 
-In order for your library to be able to be added to other **Swift Playgrounds ** App projects there are a few requirements:
+In order for your library to be able to be added to other **Swift Playgrounds** App projects there are a few requirements:
 1. Your project must be tagged as a release. You can do that on GitHub or you can [add a tag](https://workingcopy.app/manual/tagging) when you commit in Working Copy before you push to GitHub.
 2. Your project must be available without logging in. This means that it either needs to be a Public repository on GitHub or you need to [use a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) (PAT) to access it.
 > **Note**: Your PAT will be recorded into the `Package.swift` file if you have to go that route, so do *not* distribute any project that depends on your library while it is private (or create a fine-grained PAT that is very specific to only reading that one repository).
