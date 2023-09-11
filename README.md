@@ -1,4 +1,4 @@
-# In-App Libraries for Swift Playgrounds
+﻿# In-App Libraries for Swift Playgrounds
 
 Since the addition of App projects in **Swift Playgrounds 4** it’s been easy to use libraries in Swift packages hosted online in your Apps, but it hasn’t been easy or clear how to *create* libraries for reuse using **Swift Playgrounds**.
 
@@ -61,6 +61,7 @@ If your GitHub repository is Private, you can create a personal access token tha
 ### Required Changes to Package Manifest
 
 The `Package.swift` file needs to have the product and target for your library that was added, but needs to NOT have a  `AppModule` target. You can either remove the `AppModule` target (and the `iOSApplication` product that references it) or you can change the name of the `AppModule` target (and all references to it, including the directory in `Sources` with all your application’s code). **Important**: If your Package.swift includes the `AppModule` then **Swift Playgrounds** will not let you add that package as a dependency because it conflicts with the `AppModule` target of the app in which you’re trying to add it.
+
 ```swift
 // swift-tools-version: 5.8
 import PackageDescription
