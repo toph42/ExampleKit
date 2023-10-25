@@ -8,10 +8,12 @@ I have created this project as a template for how to have a project in **Swift P
 
 ## Source Control
 
-Utilizing Source Control for your Swift Playgrounds project is simple with [Working Copy](https://workingcopy.app) by Anders  Borum. (You will need to upgrade to Pro to be able to use it for your Playgrounds, but it is absolutely worth it.) Just tap the ➕ above the **Repository** list and select **Link external directory 🔗** then browse to your Playground in the **Files** browser (usually in the Playgrounds folder on **iCloud Drive**, but if you are using my template it will be wherever you saved it). 
+Utilizing Source Control for your Swift Playgrounds project is simple with [Working Copy](https://workingcopy.app) by Anders  Borum. (You will need to upgrade to Pro to be able to use it for your Playgrounds, but it is absolutely worth it. If you are a student you can access all the pro features for free if you sign up for the [GitHub Student Developer Pack](https://education.github.com/pack).) Just tap the ➕ above the **Repository** list and select **Link external directory 🔗** then browse to your Playground in the **Files** browser (usually in the Playgrounds folder on **iCloud Drive**, but if you are using my template it will be wherever you saved it). 
 > **Note**: It will look like you cannot select the Playground file. What you have to do is **Get Info** on the Playground by doing a tap-and-hold to get the context menu and then selecting **Get Info** from it. Once you have the info open, just tap the large file icon at the top of the info screen in order to select the project and create the Repository.
 
-Once you have a Repository in Working Copy it makes things quite a bit easier, as there are some things you cannot edit in **Swift Playgrounds** that must be edited to publish your library.
+If you are not a student and are not willing to pay for the Working Copy pro features, you can accomplish this similarly in [PolyGit](https://www.polygitapp.com) by creating a local repository with a `.swiftpm` file extension.
+
+Once you have a Repository in a git client it makes things quite a bit easier, as there are some things you cannot edit in **Swift Playgrounds** that must be modified to publish your library.
 
 ## Converting an Existing App Playground
 
